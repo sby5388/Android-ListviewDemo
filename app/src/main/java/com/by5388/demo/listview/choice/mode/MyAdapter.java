@@ -20,38 +20,11 @@ public class MyAdapter extends BaseAdapter {
     private final List<String> mStringList = new ArrayList<>();
     private final int mItemLayout;
 
-    public void removeAll(Collection<String> strings) {
-        if (strings == null) {
-            return;
-        }
-        for (String s : strings) {
-            remove(s);
-        }
-    }
-
-    public void setStringList(Collection<String> strings){
-        if (strings == null) {
-            return;
-        }
-        mStringList.clear();
-        mStringList.addAll(strings);
-    }
-
-    public MyAdapter(@NonNull MyAdapter adapter,int itemLayout) {
+    public MyAdapter(@NonNull MyAdapter adapter, int itemLayout) {
         this(itemLayout);
         this.mStringList.clear();
         this.mStringList.addAll(adapter.mStringList);
     }
-
-    public void remove(String s) {
-        final int index = mStringList.indexOf(s);
-        if (index < 0) {
-            return;
-        }
-        mStringList.remove(index);
-
-    }
-
 
     public MyAdapter(int itemLayout) {
         mItemLayout = itemLayout;
@@ -62,6 +35,32 @@ public class MyAdapter extends BaseAdapter {
 
     public MyAdapter() {
         this(android.R.layout.simple_list_item_1);
+    }
+
+    public void removeAll(Collection<String> strings) {
+        if (strings == null) {
+            return;
+        }
+        for (String s : strings) {
+            remove(s);
+        }
+    }
+
+    public void setStringList(Collection<String> strings) {
+        if (strings == null) {
+            return;
+        }
+        mStringList.clear();
+        mStringList.addAll(strings);
+    }
+
+    public void remove(String s) {
+        final int index = mStringList.indexOf(s);
+        if (index < 0) {
+            return;
+        }
+        mStringList.remove(index);
+
     }
 
     @Override

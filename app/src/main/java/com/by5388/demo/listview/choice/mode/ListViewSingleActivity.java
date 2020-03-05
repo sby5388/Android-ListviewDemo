@@ -13,8 +13,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ListViewSingleActivity extends BaseActivity {
-    private ListView mListView;
     private final List<Integer> mIntegers = new ArrayList<>();
+    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

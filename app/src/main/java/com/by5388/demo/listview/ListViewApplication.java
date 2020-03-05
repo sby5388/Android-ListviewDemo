@@ -7,17 +7,18 @@ import android.widget.Toast;
  * @author Administrator  on 2020/3/5.
  */
 public class ListViewApplication extends Application {
+    private static ListViewApplication sApplication;
     private Toast mToast;
 
-    private static ListViewApplication sApplication;
+    public static void toast(String s) {
+        sApplication.toastShort(s);
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
         sApplication = this;
     }
-
-
 
     private void toastShort(String s) {
         if (mToast != null) {
@@ -49,10 +50,6 @@ public class ListViewApplication extends Application {
         }
         mToast = Toast.makeText(this, s, Toast.LENGTH_LONG);
         mToast.show();
-    }
-
-    public static void toast(String s) {
-        sApplication.toastShort(s);
     }
 
 }

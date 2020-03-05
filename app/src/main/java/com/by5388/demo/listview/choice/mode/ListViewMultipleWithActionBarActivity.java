@@ -23,8 +23,8 @@ import java.util.Locale;
 
 public class ListViewMultipleWithActionBarActivity extends BaseActivity
         implements AbsListView.MultiChoiceModeListener {
-    private ListView mListView;
     private final List<Integer> mIntegers = new ArrayList<>();
+    private ListView mListView;
     private MyAdapter mAdapter;
     private TextView mTextView;
 
