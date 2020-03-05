@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ListviewDemo</string>
+    <string name="model_default">默认模式</string>
+    <string name="model_single">单选模式</string>
+    <string name="model_multiple">多选模式</string>
+    <string name="model_multiple_with_actionbar">多选模式 + actionBar</string>
+    <string name="submit">提交</string>
+    <string name="tip_actionbar_multiple">长按item进入带ActionBar的多选模式</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+
+    <string name="title_selected">已选择%d个</string>
+</resources>
